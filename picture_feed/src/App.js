@@ -1,5 +1,5 @@
 import React from 'react';
-import Feeds from './Feeds';
+import Feeds from './components/Feeds';
 
 function App() {
   return (

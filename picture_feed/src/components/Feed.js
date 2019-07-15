@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import scrapButtonOnSvg from './assets/scrap_on.svg';
-import scrapButtonOffSvg from './assets/scrap_off.svg';
+import scrapButtonOnSvg from '../assets/scrap_on.svg';
+import scrapButtonOffSvg from '../assets/scrap_off.svg';
 
 const Wrapper = styled.div`
   display: flex;

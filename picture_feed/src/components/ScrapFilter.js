@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import checkbox_checked from './assets/checkbox_checked.svg';
-import checkbox_unchecked from './assets/checkbox_unchecked.svg';
+import checkbox_checked from '../assets/checkbox_checked.svg';
+import checkbox_unchecked from '../assets/checkbox_unchecked.svg';
 
 const Wrapper = styled.div`
   display: flex;
