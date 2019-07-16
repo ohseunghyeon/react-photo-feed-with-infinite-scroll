@@ -8,13 +8,14 @@ import ScrapFilter from './ScrapFilter';
 import Feed from './Feed';
 
 const Wrapper = styled.div`
-  padding: 30px 40px 0 60px;
+  padding: 30px 20px 0 40px;
   font-size: 15px;
 `;
 
 const List = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 function FeedList() {
