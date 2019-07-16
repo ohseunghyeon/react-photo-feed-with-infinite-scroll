@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -19,8 +19,9 @@ const List = styled.div`
 
 function FeedList() {
   const [page, setPage] = useState(1);
+  const increasePage = useCallback(() => setPage(page + 1), [page]);
   const [isFiltered, setIsFilterd] = useState(false);
-  const [feeds, hasMore] = useFeeds(page, setPage);
+  const [feeds, hasMore] = useFeeds(page, increasePage);
   const [scrapList, setScrapList] = useScrapList();
 
   return (
@@ -32,7 +33,7 @@ function FeedList() {
 
       <InfiniteScroll
         dataLength={feeds.length}
-        next={() => setPage(page => page + 1)}
+        next={increasePage}
         hasMore={hasMore}
       >
         <List>

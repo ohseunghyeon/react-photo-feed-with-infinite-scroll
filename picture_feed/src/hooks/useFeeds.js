@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // custom hook for feeds
-export default function useFeeds(page, setPage) {
+export default function useFeeds(page, increasePage) {
   const [feeds, setFeeds] = useState([]);
   const [hasMore, setHasMore] = useState(true); // option value for infinite scroll 
 
@@ -14,8 +14,6 @@ export default function useFeeds(page, setPage) {
         newFeeds.length
           ? setFeeds(feeds => feeds.concat(newFeeds))
           : setHasMore(false);
-
-
       };
 
       requestFeeds();
@@ -30,10 +28,10 @@ export default function useFeeds(page, setPage) {
       const clientHeight = document.documentElement.clientHeight;
 
       if (feeds.length > 0 && scrollTop + clientHeight === scrollheight) {
-        setPage(page => page + 1);
+        increasePage();
       }
     },
-    [feeds, setPage]
+    [feeds, increasePage]
   )
 
   return [feeds, hasMore]
