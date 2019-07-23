@@ -151,12 +151,12 @@
 
 1.  사용자가 이메일 뿐만아니라 facebook이나 naver를 이용해서 로그인 하게 해주세요.
 
-users 테이블에 아래의 컬럼을 추가하여 각 서비스에서 제공될 access_token을 저장
+users 테이블에 아래의 컬럼을 추가하여 각 서비스에서 제공될 unique id를 저장
 
-| column   | type           |
-|----------|----------------|
-| fb_token | String         |
-| nv_token | String         |
+| column | type   |
+|--------|--------|
+| fb_id  | String |
+| nv_id  | String |
 
 2. 그리고 댓글에는 대댓글을 달 수 있게 해주세요.
 
