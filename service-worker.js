@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-photo-feed-with-infinite-scroll/precache-manifest.d4b3025e3566f1e7d1acbcba6d1e2560.js"
+  "/react-photo-feed-with-infinite-scroll/precache-manifest.dfc46ffd22da3e68c346d0b6ea47c24c.js"
 );
 
 self.addEventListener('message', (event) => {
